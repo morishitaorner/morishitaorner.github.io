@@ -564,7 +564,10 @@
   });
 
   // Slack Incoming Webhook for #発注おみやげ
-  const SLACK_WEBHOOK_URL = "https://hooks.slack.com/services/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";
+  // Google Apps Script relay endpoint (forwards to Slack #発注おみやげ).
+  // The actual Slack webhook URL is hidden inside the Apps Script project so
+  // it doesn't get auto-revoked when this file is pushed to a public repo.
+  const SLACK_WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbxJlB0Zd0UwZgpkc4GH8O--t3qvmqArW_dlOgS10sSnufbN8P54px0YWAQoxohF5PSt/exec";
 
   function buildSlackText(){
     const now = new Date();
